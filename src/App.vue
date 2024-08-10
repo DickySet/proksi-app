@@ -1,8 +1,18 @@
 <template>
 
   <k-app theme="ios">
-    <k-page :class="classPage">
+    <k-page>
+      
+      <NavbarMenu />
+
       <router-view></router-view>
+
+      <TabMenu />
+
+      <PopupDialog />
+
+      <div class="absolute bottom-0 text-center w-full text-xs  p-4 text-gray-500">Version 1.1</div>
+
     </k-page>
   </k-app>
 
@@ -10,9 +20,10 @@
 
 <script setup>
 
-  import { ref } from 'vue'
   import { kApp, kPage } from 'konsta/vue';
 
-  const classPage = ref('')
+  import NavbarMenu from './components/menu/NavbarMenu.vue';
+  import TabMenu from './components/menu/TabMenu.vue';
+  import PopupDialog  from './components/PopupDialog.vue';
 
 </script>

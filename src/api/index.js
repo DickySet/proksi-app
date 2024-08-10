@@ -1,8 +1,11 @@
 import axios from 'axios';
+import {
+    BASE_URL,
+} from "../params";
 
 // Buat instance axios tanpa header Authorization
 const Api = axios.create({
-    baseURL: 'https://gt-guard-dev.garudatekno.com'
+    baseURL: BASE_URL
 });
 
 // Menambahkan interceptor untuk menetapkan header Authorization
